@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="myCtrl" ng-show="loaded">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Freelancer - Start Bootstrap Theme</title>
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/freelancer.min.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        .portfolio-content {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body id="page-top" class="index">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Resume</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-text">
+                        <span class="name"><i class="fa fa-user"></i></span>
+                        <span class="name">{{summary.FirstName}}</span>
+                        <hr class="star-light">
+                        <span class="skills">{{summary.City}}, {{summary.Country}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Portfolio</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#experienceModal" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h1>
+                                <i class="fa fa-building fa-3x"></i>
+                            </h1>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#educationModal" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h1>
+                                <i class="fa fa-university fa-3x"></i>
+                            </h1>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#projectsModal" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h1>
+                                <i class="fa fa-photo fa-3x"></i>
+                            </h1>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#membershipsModal" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h1>
+                                <i class="fa fa-cubes fa-3x"></i>
+                            </h1>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#awardsModal" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h1>
+                                <i class="fa fa-trophy fa-3x"></i>
+                            </h1>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#referenceModal" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h1>
+                                <i class="fa fa-user fa-3x"></i>
+                            </h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>{{summary.Description}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Contact Me</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                    <div class="row">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Name</label>
+                            <input type="text" readonly="readonly" value="{{summary.FirstName}} {{summary.LastName}}" class="form-control" placeholder="Name" id="name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Email Address</label>
+                            <input type="email" readonly="readonly" value="{{summary.Email}}" class="form-control" placeholder="Email Address" id="email">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-3">
+                    </div>
+                    <div class="footer-col col-md-6">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li ng-if="summary.Facebook">
+                                <a ng-href="{{summary.Facebook}}" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li ng-if="summary.GooglePlus">
+                                <a ng-href="{{summary.GooglePlus}}" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li ng-if="summary.Twitter">
+                                <a ng-href="{{summary.Twitter}}" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li ng-if="summary.LinkedIn">
+                                <a ng-href="{{summary.LinkedIn}}" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li ng-if="summary.GitHub">
+                                <a ng-href="{{summary.GitHub}}" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                            </li>
+                            <li ng-if="summary.Behance">
+                                <a ng-href="{{summary.Behance}}" class="btn-social btn-outline"><i class="fa fa-fw fa-behance"></i></a>
+                            </li>
+                            <li ng-if="summary.deviantART">
+                                <a ng-href="{{summary.deviantART}}" class="btn-social btn-outline"><i class="fa fa-fw fa-deviantart"></i></a>
+                            </li>
+                            <li ng-if="summary.YouTube">
+                                <a ng-href="{{summary.YouTube}}" class="btn-social btn-outline"><i class="fa fa-fw fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; MeVitae UnPack 2016
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="experienceModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Experience</h2>
+                            <hr class="star-primary">
+                            <ul class="list-inline item-details" ng-repeat="experience in experiencelist">
+                                <li>
+                                    Company:
+                                    <strong>
+                                        {{experience.CompanyName}}
+                                    </strong>
+                                </li>
+                                <li>
+                                    Date:
+                                    <strong>
+                                        {{experience.StartDate}} — {{experience.EndDate}}
+                                    </strong>
+                                </li>
+                                <li>
+                                    Title:
+                                    {{experience.JobTitle}}
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="educationModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Education</h2>
+                            <hr class="star-primary">
+                            <ul class="list-inline item-details" ng-repeat="education in educationlist">
+                                <li>
+                                    Institution Name:
+                                    <strong>
+                                        {{education.InstitutionName}}
+                                    </strong>
+                                </li>
+                                <li>
+                                    Date:
+                                    <strong>
+                                        {{education.StartDate}} — {{edu.EndDate}}
+                                    </strong>
+                                </li>
+                                <li>
+                                    Qualification Type:
+                                    <strong>
+                                        {{education.QualificationType}}
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="projectsModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Projects</h2>
+                            <hr class="star-primary">
+                            <ul class="list-inline item-details" ng-repeat="project in projectlist">
+                                <li>
+                                    Project Title:
+                                    <strong>
+                                        {{project.Title}}
+                                    </strong>
+                                </li>
+                                <li>
+                                    Date:
+                                    <strong>
+                                        {{project.StartDate}} — {{project.EndDate}}
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="membershipsModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Memberships</h2>
+                            <hr class="star-primary">
+                            <ul class="list-inline item-details" ng-repeat="membership in membershiplist">
+                                <li>
+                                    Title:
+                                    <strong>
+                                        {{membership.Title}}
+                                    </strong>
+                                </li>
+                                <li>
+                                    Date:
+                                    <strong>
+                                        {{membership.StartDate}} — {{membership.EndDate}}
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="awardsModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Awards</h2>
+                            <hr class="star-primary">
+                            <ul class="list-inline item-details" ng-repeat="award in awardlist">
+                                <li>
+                                    Title:
+                                    <strong>
+                                        {{award.Title}}
+                                    </strong>
+                                </li>
+                                <li>
+                                    Date:
+                                    <strong>
+                                        {{award.StartDate}} — {{award.EndDate}}
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="referenceModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>References</h2>
+                            <hr class="star-primary">
+                            <ul class="list-inline item-details" ng-repeat="reference in referencelist">
+                                <li>
+                                    Title:
+                                    <strong>
+                                        {{reference.Title}}
+                                    </strong>
+                                </li>
+                                <li>
+                                    Name:
+                                    <strong>
+                                        {{reference.FirstName}} — {{reference.LastName}}
+                                    </strong>
+                                </li>
+                                <li>
+                                    Job Title:
+                                    <strong>
+                                        {{reference.JobTitle}}
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="../js/jquery.easing.min.js"></script>
+    <script src="../js/classie.js"></script>
+    <script src="../js/cbpAnimatedHeader.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="../js/freelancer.js"></script>
+    <!-- Unpack and angular addin-->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+    <script src='https://cdn.rawgit.com/MeVitae/UnPack/v0.2/unlock-mevitae-javascript.js'></script>
+    <script src='https://cdn.rawgit.com/MeVitae/UnPack/v0.2/UnPack.js'></script>
+</body>
+</html>
+ <script type='text/javascript'> 
+ // The following is to Enable-MeVitae-Script (Do not remove this comment or else the plugin might not work) 
+ var data = getCV("e2edb9bc-5fa1-4d8e-bebc-698713475ae0",1,true); 
+ AngularUnpackLoad(data); 
+ </script> 
